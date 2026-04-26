@@ -1,0 +1,102 @@
+/* -----------------CSS BY Izumi Silagy -----------------*/
+
+/* -----------------IMPORTED FONTS -----------------*/
+
+@import url('https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=Jacques+Francois&family=Zen+Old+Mincho&display=swap');
+
+/* -----------------CSS RESET -----------------*/
+/* http://meyerweb.com/eric/tools/css/reset/ 
+    v2.0 | 20110126
+    License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* ----------------- ROOT VARIABLES -----------------*/
+:root {
+    --off-white:#fafafa;
+    --off-white-half: #fafafa80;
+    --off-white-quarter: #fafafa3a;
+    --bl-white: #EEF3FA;
+    --bl-blk: #000D16;
+    /* light mode */
+    --teal-gray: #D0D9DE;
+    --seafoam: #477880;
+    /* dark mode */
+    --dark-seafoam: #102733;
+    --mid-seafoam: #193848;
+}
+
+
+/* ----------------- MAIN CSS -----------------*/
+
+/* from cssportal */
+html {
+    background:
+        radial-gradient(50% 50% at 100% 0, #D0D9DE 0% 5%, #C5D3D5 6% 15%, #D0D9DE 16% 25%, #C5D3D5 26% 35%, #D0D9DE 36% 45%,
+            #C5D3D5 46% 55%, #D0D9DE 56% 65%, #C5D3D5 66% 75%, #D0D9DE 76% 85%, #C5D3D5 86% 95%,
+            #0000 96%),
+        radial-gradient(50% 50% at 0 100%, #D0D9DE 0% 5%, #C5D3D5 6% 15%, #D0D9DE 16% 25%, #C5D3D5 26% 35%, #D0D9DE 36% 45%,
+            #C5D3D5 46% 55%, #D0D9DE 56% 65%, #C5D3D5 66% 75%, #D0D9DE 76% 85%, #C5D3D5 86% 95%,
+            #0000 96%),
+        radial-gradient(50% 50%, #D0D9DE 0% 5%, #C5D3D5 6% 15%, #D0D9DE 16% 25%, #C5D3D5 26% 35%, #D0D9DE 36% 45%,
+            #C5D3D5 46% 55%, #D0D9DE 56% 65%, #C5D3D5 66% 75%, #D0D9DE 76% 85%, #C5D3D5 86% 95%,
+            #0000 96%),
+        radial-gradient(50% 50%, #D0D9DE 0% 5%, #C5D3D5 6% 15%, #D0D9DE 16% 25%, #C5D3D5 26% 35%, #D0D9DE 36% 45%,
+            #C5D3D5 46% 55%, #D0D9DE 56% 65%, #C5D3D5 66% 75%, #D0D9DE 76% 85%, #C5D3D5 86% 95%,
+            #0000 96%) 63px 63px;
+    background-size: 126px 126px;
+    background-color: #D0D9DE;
+}
+
+body {
+    width: 1280px;
+    font-family: 'Jacques Francois', Georgia, 'Times New Roman', Times, serif;
+}
+
+header, nav, section, footer {
+    margin: 0 auto;
+    width: 80%;
+}
