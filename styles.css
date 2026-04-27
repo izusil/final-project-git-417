@@ -93,10 +93,194 @@ html {
 
 body {
     width: 1280px;
-    font-family: 'Jacques Francois', Georgia, 'Times New Roman', Times, serif;
+    font-size: 1.2rem;
+    line-height: 1.75rem;
+    margin: 0 auto;
 }
 
 header, nav, section, footer {
     margin: 0 auto;
+    padding: 1.25rem;
+}
+
+header, nav {
+    background-color: var(--bl-blk);
+
+}
+
+h1, h2, h3 {
+    font-family: 'Jacques Francois', Georgia, 'Times New Roman', Times, serif;
+}
+
+h1 {
+    display: block;
+    font-size: 3.5rem;
+    text-align: center;
+    color: var(--bl-white);
+    text-transform: uppercase;
+    margin-top: 1.75rem;
+}
+
+h2 {
+    text-transform: uppercase;
+    text-decoration: underline;
+    font-size: 2.5rem;
+    padding: .5rem 0 1rem 0;
+}
+
+p {
+    font-family: 'Crimson Text', Georgia, 'Times New Roman', Times, serif;
+    margin: 1rem;
+}
+
+nav ul  {
+    display: grid;
+    grid-template-columns:  1fr 1fr 1fr 1fr;
+    text-align: center;
+    width: 55%;
+    margin: 0 auto;
+
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--bl-white);
+    transition: font-size .2s ease-in-out;
+    font-size: 1.2rem;
+    font-family: 'Zen Old Mincho', Georgia, 'Times New Roman', Times, serif;
+}
+
+nav a:hover {
+    font-size: 1.45rem;
+}
+
+ol li {
+    font-family: 'Zen Old Mincho', Georgia, 'Times New Roman', Times, serif;
+    list-style-type: decimal-leading-zero;
+}
+
+main > img {
+    z-index: -1;
+    width: 1280px;
+    position: relative;
+    top: -150px;
+    margin-bottom: -120px;
+}
+
+#about, #guess {
+    background-color: var(--off-white);
     width: 80%;
 }
+
+#about {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: .1fr 1fr;
+    box-shadow: var(--mid-seafoam) 3px 3px 8px 2px;
+}
+
+#about h2 {
+    grid-column: 2/3;
+    grid-row: 1/2;
+    padding-left: 1rem;
+    padding-top: 1.5rem;
+}
+
+#about div {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row: 2/3;
+}
+
+#about .gridImg {
+    grid-column: 1/2;
+    grid-row: 1/3;
+    align-self: center;
+    justify-self: center;
+}
+
+#about img {
+    width: 60%;
+    padding-left: 6rem;
+}
+
+
+#albums, #contact {
+    background-color: var(--seafoam);
+    color: var(--bl-white);
+    margin: 4rem 0;
+}
+
+#albums h2 {
+    text-align: right;
+    margin-right: 10rem;
+}
+
+#albums h3 {
+    font-size: 2rem;
+}
+
+#change {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 24px;
+    text-align: right;
+    width: 70%;
+    margin-left: 16rem;
+}
+
+#change button {
+    background-color: var(--seafoam);
+    border: none;
+    font-size: 2rem;
+    color: var(--off-white-half);
+    font-family: 'Zen Old Mincho', Georgia, 'Times New Roman', Times, serif; 
+
+}
+
+#change button:hover {
+    color: var(--bl-white);
+    cursor: pointer;
+}
+
+#change button.active {
+    color: var(--bl-white);
+}
+
+#q, #ten, #j2D, #bl, #aku {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: .1fr .1fr 1fr;
+    margin: 0 7rem;
+    column-gap: 32px;
+}
+
+#q div, #ten div, #j2D div, #bl div, #aku div {
+    grid-column: 1/2;
+    grid-row: 1/4;
+    justify-self: center;
+    align-self: center;
+}
+
+#q img, #ten img, #j2D img, #bl img, #aku img {
+    width: 480px;
+}
+
+#q p, #ten p, #j2D p, #bl p, #aku p {
+    margin: 0;
+    margin-top: .5rem;
+    font-family:'Jacques Francois', Georgia, 'Times New Roman', Times, serif;
+}
+
+#q ol, #ten ol, #j2D ol, #bl ol, #aku ol {
+    list-style-position: inside;
+}
+
+input, label {
+    display: block;
+}
+
+.hidden {
+    display: none !important;
+}
+

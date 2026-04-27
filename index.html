@@ -25,16 +25,24 @@
         <img src="images/qbgroup.jpg" alt="">
         <section id="about">
             <h2>About</h2>
-            <p>Queen Bee is a self-described “fashion-punk” band formed in Kobe, Japan, in 2009. Since then, eight of their albums have hit the Japan Top 100 Billboards and their music has been featured in anime such as Chainsaw Man and Oshi no Ko.</p>
+            <div class="gridImg"><img src="images/qb logo.png" alt="The Queen Bee logo."></div>
+            <div><p>Queen Bee is a self-described “fashion-punk” band formed in Kobe, Japan, in 2009. Since then, eight of their albums have hit the Japan Top 100 Billboards and their music has been featured in anime such as Chainsaw Man and Oshi no Ko.</p>
             <p>AVU-CHAN is the lead vocals and second guitar, along with being the lyricist and composer of Queen Bee’s songs.</p>
             <p>YASHI-CHAN is the bass guitarist.</p>
-            <p>HIBARI-KUN is the lead guitarist.</p>
+            <p>HIBARI-KUN is the lead guitarist.</p></div>
         </section>
         <section id="albums">
             <h2>Albums</h2>
+            <section id="change">
+                <button id="changeQ" class="active">Q</button>
+                <button id="changeTen">十</button>
+                <button id="changeBL">BL</button>
+                <button id="change12D">十二次元</button>
+                <button id="changeAku">悪</button>
+            </section>
             <section id="q">
                 <h3>Q</h3>
-                <img src="images/q.jpg" alt="Black and white headshot of a mostly-shadowed bust, viewed from the side. The lenses of their glasses and a Q-shaped halo glow yellow.">
+                <div><img src="images/q.jpg" alt="Black and white headshot of a mostly-shadowed bust, viewed from the side. The lenses of their glasses and a Q-shaped halo glow yellow."></div>
                 <p>Release date: 2017/04/05</p>
                 <ol>
                     <li>アウトロダクション</li>
@@ -48,9 +56,9 @@
                     <li>雛市</li>
                 </ol>
             </section>
-            <section id="ten">
-                <h3>Ten (十)</h3>
-                <img src="images/ten.jpg" alt="A headshot of Avu-chan with short hair making a heart around the cross-shaped scar in their forehead.">
+            <section id="ten" class="hidden">
+                <h3>十</h3>
+               <div> <img src="images/ten.jpg" alt="A headshot of Avu-chan with short hair making a heart around the cross-shaped scar in their forehead."></div>
                 <p>Release date: 2019/05/22</p>
                 <ol>
                     <li>聖戦</li>
@@ -65,9 +73,9 @@
                     <li>Introduction</li>
                 </ol>
             </section>
-            <section id="bl">
+            <section id="bl" class="hidden">
                 <h3>BL</h3>
-                <img src="images/bl.jpg" alt="A vibrant illustration of two figures lounging in a messy room. They're both grinning.">
+          <div>      <img src="images/bl.jpg" alt="A vibrant illustration of two figures lounging in a messy room. They're both grinning."></div>
                 <p>Release date: 2020/02/19</p>
                 <ol>
                     <li>HBD</li>
@@ -88,17 +96,17 @@
                     <li>PRIDE (off vocal ver.)</li>
                 </ol>
             </section>
-            <section id="12D">
-                <h3>12D (十二次元)</h3>
-                <img src="images/12d.jpg" alt="An intensely-lit photo of a many-armed figure, lit by dim blue and red lights. They're posed like a Hindu deity.">
+            <section id="j2D" class="hidden">
+                <h3>十二次元</h3>
+               <div> <img src="images/12d.jpg" alt="An intensely-lit photo of a many-armed figure, lit by dim blue and red lights. They're posed like a Hindu deity."></div>
                 <p>Release date: 2023/02/01</p>
                 <ol>
                     <li>油</li>
                     <li>犬姫(2D ver.)</li>
                     <li>夜啼鶯</li>
-                    <li>MYSTERIOUS　…TVアニメ『後宮の烏』オープニング・テーマ</li>
+                    <li>MYSTERIOUS</li>
                     <li>KING BITCH (feat.歌代ニーナ)</li>
-                    <li>バイオレンス　…TVアニメ『チェンソーマン』第話エンディング・テーマ</li>
+                    <li>バイオレンス</li>
                     <li>杜若</li>
                     <li>回春</li>
                     <li>堕天</li>
@@ -107,9 +115,9 @@
                     <li>十二次元</li>
                 </ol>
             </section>
-            <section id="aku">
-                <h3>Aku (悪)</h3>
-                <img src="images/aku.jpg" alt="In a green wheat field under a blue sky, a figure in a white sundress and hat smiles.">
+            <section id="aku" class="hidden">
+                <h3>悪</h3>
+                <div><img src="images/aku.jpg" alt="In a green wheat field under a blue sky, a figure in a white sundress and hat smiles."></div>
                 <p>Release date: 2025/03/05</p>
                 <ol>
                     <li>紫狂詩曲</li>
@@ -156,7 +164,9 @@
         </section>
 
     </main>
-    <footer></footer>
+    <footer>
+        <small>Made by izusil</small>
+    </footer>
 </body>
 
 </html>
