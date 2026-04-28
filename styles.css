@@ -110,11 +110,14 @@ header, nav {
     
 }
 
+
+
 /* honeycomb decorations */
 header img {
     position: absolute;
     opacity: 50%;
     height: 250px;
+    object-fit: contain;
 }
 
 header img.left {
@@ -129,22 +132,29 @@ header img.right {
 
 #about img.card {
     position: absolute;
-    right: 90px;
+    right: 108px;
     top: 1013px;
     opacity: 70%;
 }
 
 #guess img.card {
     position: absolute;
-    right: 90px;
-    top: 2257px;
+    right: 108px;
+    top: 2357px;
     opacity: 70%;
+}
+
+/* jp name */
+header img.jpname {
+    height: 120px;
+    left: 440px;
+    top: 0;
 }
 
 /* flower decorations */
 #albums img.flower {
     position: absolute;
-    height: 640px;
+    height: 740px;
     width: auto;
     right: 30px;
     top: 1555px;
@@ -156,7 +166,7 @@ header img.right {
     height: 540px;
     width: auto;
     left: 0px;
-    top: 2615px;
+    top: 2715px;
     opacity: 10%;
 }
 
@@ -277,6 +287,9 @@ cite {
     font-style: oblique;
 }
 
+#albums {
+    height: 760px;
+}
 
 #albums.light, #contact.light {
     background-color: var(--seafoam);
@@ -426,7 +439,6 @@ cite {
     padding: 1rem 3rem;
     padding-left: 9rem;
     margin-bottom: 0;
-
 }
 
 #contactdiv {
