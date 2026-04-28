@@ -5,13 +5,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
-    <!-- <script src="script.js"></script> -->
+    <script src="script.js" defer></script>
     <title>Queen Bee | Home</title>
 </head>
 
 <body>
     <header id="header">
         <h1>Queen Bee</h1>
+        <img src="images/honeycomb.png" alt="" class="left">
+        <img src="images/honeycombflip.png" alt="" class="right">
     </header>
     <nav>
         <ul>
@@ -23,16 +25,20 @@
     </nav>
     <main id="main">
         <img src="images/qbgroup.jpg" alt="">
-        <section id="about">
+        <section id="about" class="light">
             <h2>About</h2>
             <div class="gridImg"><img src="images/qb logo.png" alt="The Queen Bee logo."></div>
-            <div><p>Queen Bee is a self-described “fashion-punk” band formed in Kobe, Japan, in 2009. Since then, eight of their albums have hit the Japan Top 100 Billboards and their music has been featured in anime such as Chainsaw Man and Oshi no Ko.</p>
-            <p>AVU-CHAN is the lead vocals and second guitar, along with being the lyricist and composer of Queen Bee’s songs.</p>
-            <p>YASHI-CHAN is the bass guitarist.</p>
-            <p>HIBARI-KUN is the lead guitarist.</p></div>
+            <div>
+                <img src="images/honeycombflip.png" alt="" class="card">
+                <p>Queen Bee is a self-described “fashion-punk” band formed in Kobe, Japan, in 2009. Since then, eight of their albums have hit the Japan Top 100 Billboards and their music has been featured in anime such as <cite>Chainsaw Man</cite> and <cite>Oshi no Ko.</cite></p>
+                <p>AVU-CHAN is the lead vocals and second guitar, along with being the lyricist and composer of Queen Bee’s songs.</p>
+                <p>YASHI-CHAN is the bass guitarist.</p>
+                <p>HIBARI-KUN is the lead guitarist.</p>
+            </div>
         </section>
-        <section id="albums">
+        <section id="albums" class="light">
             <h2>Albums</h2>
+            <img src="images/flower2 openclipart-vector.png" alt="" class="flower">
             <section id="change">
                 <button id="changeQ" class="active">Q</button>
                 <button id="changeTen">十</button>
@@ -58,7 +64,7 @@
             </section>
             <section id="ten" class="hidden">
                 <h3>十</h3>
-               <div> <img src="images/ten.jpg" alt="A headshot of Avu-chan with short hair making a heart around the cross-shaped scar in their forehead."></div>
+                <div> <img src="images/ten.jpg" alt="A headshot of Avu-chan with short hair making a heart around the cross-shaped scar in their forehead."></div>
                 <p>Release date: 2019/05/22</p>
                 <ol>
                     <li>聖戦</li>
@@ -75,7 +81,7 @@
             </section>
             <section id="bl" class="hidden">
                 <h3>BL</h3>
-          <div>      <img src="images/bl.jpg" alt="A vibrant illustration of two figures lounging in a messy room. They're both grinning."></div>
+                <div> <img src="images/bl.jpg" alt="A vibrant illustration of two figures lounging in a messy room. They're both grinning."></div>
                 <p>Release date: 2020/02/19</p>
                 <ol>
                     <li>HBD</li>
@@ -98,7 +104,7 @@
             </section>
             <section id="j2D" class="hidden">
                 <h3>十二次元</h3>
-               <div> <img src="images/12d.jpg" alt="An intensely-lit photo of a many-armed figure, lit by dim blue and red lights. They're posed like a Hindu deity."></div>
+                <div> <img src="images/12d.jpg" alt="An intensely-lit photo of a many-armed figure, lit by dim blue and red lights. They're posed like a Hindu deity."></div>
                 <p>Release date: 2023/02/01</p>
                 <ol>
                     <li>油</li>
@@ -133,39 +139,54 @@
                 </ol>
             </section>
         </section>
-        <section id="guess">
-            <h2>Guess</h2>
-            <p>Guess the number and enter for a chance to win!</p>
+        <section id="guess" class="light">
+            <div>
+                <h2>Guess</h2>
+                <img src="images/honeycombflip.png" alt="" class="card">
+                <p>Guess the number correctly and enter for a chance to win a discount code to Queen Bee's fanclub!</p>
+                <label for="guessIn">Enter your guess:</label>
+                <input type="number" id="guessIn" min="1" max="10">
+                <button id="gamePlay">Play</button>
+            </div>
             <span id="randomNum"></span>
             <span id="guessMsg"></span>
-            <button id="gamePlay">Play</button>
         </section>
 
-        <section id="contact">
+        <section id="contact" class="light">
             <h2>Contact</h2>
-            <form>
-                <label for="name">Full Name</label>
-                <input type="text" name="name" id="name" required>
-                <fieldset>
-                    <legend>Select your prefered contact method:</legend>
-                    <input type="radio" id="conPhone" name="contact" value="phone" checked>
-                    <label for="conPhone">Phone</label>
-                    <input type="radio" id="conEmail" name="contact" value="email">
-                    <label for="conEmail">Email</label>
-                </fieldset>
-                <label for="phone">Phone Number</label>
-                <input type="tel" name="phone" id="phone">
-                <label for="email">Email</label>
-                <input type="email" name="email" id="email">
-                <label for="comments">Comments</label>
-                <textarea id="comments" name="comments" required></textarea>
-                <input type="submit" value="Submit">
-            </form>
+            <img src="images/flower2 openclipart-vectorflip.png" alt="" class="flower">
+            <div id="contactdiv">
+                <form id="form">
+                    <label for="name" class="required">Full Name</label>
+                    <input type="text" name="name" id="name" required ><p class="hidden">Please enter your full name</p>
+                    <fieldset>
+                        <legend>Select contact method:</legend>
+                        <section class="radioIn"><input type="radio" id="conPhone" name="contact" value="phone" checked>
+                            <label for="conPhone">Phone</label>
+                        </section>
+                        <section class="radioIn"><input type="radio" id="conEmail" name="contact" value="email">
+                            <label for="conEmail">Email</label>
+                        </section>
+                    </fieldset>
+                    <label for="phone">Phone Number</label>
+                    <input type="tel" name="phone" id="phone"><p class="hidden">Please enter a valid 10-digit phone number</p>
+                    <label for="email">Email</label>
+                    <input type="email" name="email" id="email"><p class="hidden">Please enter a valid email address</p>
+                    <label for="comments" class="required">Comments</label>
+                    <textarea id="comments" name="comments" ></textarea><p class="hidden">Please enter a comment</p>
+                    <input type="submit" value="Submit">
+                    <p id="displayInfo" class="hidden"></p>
+                </form>
+ 
+                <img src="images/crowd.jpg" alt="A far shot of a live audience crowd bathed in vibrant red, blue, and purple lights.">
+            </div>
         </section>
-
+        <button id="themeToggle">☀</button>
     </main>
     <footer>
-        <small>Made by izusil</small>
+        <small>Made by izusil | Spring 2026</small>
+        <small>Images from Queen Bee's Official Website and Twitter</small>
+        <small>Flower Graphics from Pixabay</small>
     </footer>
 </body>
 

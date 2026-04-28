@@ -61,35 +61,36 @@ table {
     --off-white-quarter: #fafafa3a;
     --bl-white: #EEF3FA;
     --bl-blk: #000D16;
+    --contrast: #FFEE3B;
+    --dark-seafoam: #102733;
     /* light mode */
     --teal-gray: #D0D9DE;
-    --seafoam: #477880;
+    --seafoam: #36606B;
     /* dark mode */
-    --dark-seafoam: #102733;
     --mid-seafoam: #193848;
 }
 
 
 /* ----------------- MAIN CSS -----------------*/
 
+/* setting the base bg, using outside code for the pattern */
 /* from cssportal */
 html {
-    background:
-        radial-gradient(50% 50% at 100% 0, #D0D9DE 0% 5%, #C5D3D5 6% 15%, #D0D9DE 16% 25%, #C5D3D5 26% 35%, #D0D9DE 36% 45%,
-            #C5D3D5 46% 55%, #D0D9DE 56% 65%, #C5D3D5 66% 75%, #D0D9DE 76% 85%, #C5D3D5 86% 95%,
+	background:radial-gradient(50% 50% at 100% 0, #0F232D 0% 5%, #192D32 6% 15%, #0F232D 16% 25%, #192D32 26% 35%, #0F232D 36% 45%,
+            #192D32 46% 55%, #0F232D 56% 65%, #192D32 66% 75%, #0F232D 76% 85%, #192D32 86% 95%,
             #0000 96%),
-        radial-gradient(50% 50% at 0 100%, #D0D9DE 0% 5%, #C5D3D5 6% 15%, #D0D9DE 16% 25%, #C5D3D5 26% 35%, #D0D9DE 36% 45%,
-            #C5D3D5 46% 55%, #D0D9DE 56% 65%, #C5D3D5 66% 75%, #D0D9DE 76% 85%, #C5D3D5 86% 95%,
+        radial-gradient(50% 50% at 0 100%, #0F232D 0% 5%, #192D32 6% 15%, #0F232D 16% 25%, #192D32 26% 35%, #0F232D 36% 45%,
+            #192D32 46% 55%, #0F232D 56% 65%, #192D32 66% 75%, #0F232D 76% 85%, #192D32 86% 95%,
             #0000 96%),
-        radial-gradient(50% 50%, #D0D9DE 0% 5%, #C5D3D5 6% 15%, #D0D9DE 16% 25%, #C5D3D5 26% 35%, #D0D9DE 36% 45%,
-            #C5D3D5 46% 55%, #D0D9DE 56% 65%, #C5D3D5 66% 75%, #D0D9DE 76% 85%, #C5D3D5 86% 95%,
+        radial-gradient(50% 50%, #0F232D 0% 5%, #192D32 6% 15%, #0F232D 16% 25%, #192D32 26% 35%, #0F232D 36% 45%,
+            #192D32 46% 55%, #0F232D 56% 65%, #192D32 66% 75%, #0F232D 76% 85%, #192D32 86% 95%,
             #0000 96%),
-        radial-gradient(50% 50%, #D0D9DE 0% 5%, #C5D3D5 6% 15%, #D0D9DE 16% 25%, #C5D3D5 26% 35%, #D0D9DE 36% 45%,
-            #C5D3D5 46% 55%, #D0D9DE 56% 65%, #C5D3D5 66% 75%, #D0D9DE 76% 85%, #C5D3D5 86% 95%,
-            #0000 96%) 63px 63px;
-    background-size: 126px 126px;
-    background-color: #D0D9DE;
-}
+        radial-gradient(50% 50%, #0F232D 0% 5%, #192D32 6% 15%, #0F232D 16% 25%, #192D32 26% 35%, #0F232D 36% 45%,
+            #192D32 46% 55%, #0F232D 56% 65%, #192D32 66% 75%, #0F232D 76% 85%, #192D32 86% 95%,
+            #0000 96%) 50px 50px;
+        background-size: 100px 100px;
+        background-color: #0F232D;
+    }
 
 body {
     width: 1280px;
@@ -105,8 +106,60 @@ header, nav, section, footer {
 
 header, nav {
     background-color: var(--bl-blk);
-
+    box-shadow: var(--bl-blk) 3px 3px 8px 5px;
+    
 }
+
+/* honeycomb decorations */
+header img {
+    position: absolute;
+    opacity: 50%;
+    height: 250px;
+}
+
+header img.left {
+    top: 0px;
+    left: 0px;
+}
+
+header img.right {
+    top: 0px;
+    right: 0px;
+}
+
+#about img.card {
+    position: absolute;
+    right: 90px;
+    top: 1013px;
+    opacity: 70%;
+}
+
+#guess img.card {
+    position: absolute;
+    right: 90px;
+    top: 2257px;
+    opacity: 70%;
+}
+
+/* flower decorations */
+#albums img.flower {
+    position: absolute;
+    height: 640px;
+    width: auto;
+    right: 30px;
+    top: 1555px;
+    opacity: 10%;
+}
+
+#contact img.flower {
+    position: absolute;
+    height: 540px;
+    width: auto;
+    left: 0px;
+    top: 2615px;
+    opacity: 10%;
+}
+
 
 h1, h2, h3 {
     font-family: 'Jacques Francois', Georgia, 'Times New Roman', Times, serif;
@@ -139,7 +192,11 @@ nav ul  {
     text-align: center;
     width: 55%;
     margin: 0 auto;
+}
 
+/* to make functional over img */
+nav li {
+    z-index: 1;
 }
 
 nav a {
@@ -148,6 +205,7 @@ nav a {
     transition: font-size .2s ease-in-out;
     font-size: 1.2rem;
     font-family: 'Zen Old Mincho', Georgia, 'Times New Roman', Times, serif;
+
 }
 
 nav a:hover {
@@ -167,16 +225,27 @@ main > img {
     margin-bottom: -120px;
 }
 
-#about, #guess {
+
+/* card style */
+#about.light, #guess.light {
     background-color: var(--off-white);
+    color: var(--bl-blk);
     width: 80%;
+    box-shadow: var(--mid-seafoam) 3px 3px 8px 2px;
 }
+
+#about.dark, #guess.dark {
+    background-color: var(--mid-seafoam);
+    color: var(--bl-white);
+    width: 80%;
+    box-shadow: var(--dark-seafoam) 3px 3px 8px 2px;
+}
+
 
 #about {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: .1fr 1fr;
-    box-shadow: var(--mid-seafoam) 3px 3px 8px 2px;
 }
 
 #about h2 {
@@ -204,9 +273,19 @@ main > img {
     padding-left: 6rem;
 }
 
+cite {
+    font-style: oblique;
+}
 
-#albums, #contact {
+
+#albums.light, #contact.light {
     background-color: var(--seafoam);
+    color: var(--bl-white);
+    margin: 4rem 0;
+}
+
+#albums.dark, #contact.dark {
+    background-color: var(--mid-seafoam);
     color: var(--bl-white);
     margin: 4rem 0;
 }
@@ -220,6 +299,7 @@ main > img {
     font-size: 2rem;
 }
 
+/* styles for product control switcher */
 #change {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
@@ -230,11 +310,12 @@ main > img {
 }
 
 #change button {
-    background-color: var(--seafoam);
+    background-color: #ffffff00;
     border: none;
     font-size: 2rem;
     color: var(--off-white-half);
     font-family: 'Zen Old Mincho', Georgia, 'Times New Roman', Times, serif; 
+    z-index: 1;
 
 }
 
@@ -245,8 +326,12 @@ main > img {
 
 #change button.active {
     color: var(--bl-white);
+    background-color: var(--off-white-quarter);
+    border-radius: 6px;
+        box-shadow: var(--mid-seafoam) 3px 3px 8px 2px;
 }
 
+/* styles for displaying cd cover and tracklist */
 #q, #ten, #j2D, #bl, #aku {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -276,11 +361,192 @@ main > img {
     list-style-position: inside;
 }
 
-input, label {
-    display: block;
-}
 
 .hidden {
     display: none !important;
 }
 
+/* guessing game */
+#guess {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+#guess input, #guess label {
+    display: inline;
+
+}
+
+#guess input {
+    width: 64px;
+}
+
+#guess label {
+    margin-left: 1rem;
+}
+
+
+#gamePlay {
+    display: block;
+    font-size: 1.1rem;
+    margin-top: 1.1rem;
+    margin-left: 1rem;
+    padding: .5rem 3rem;
+    background-color: var(--seafoam);
+    border: var(--dark-seafoam) 2px solid;
+    border-radius: 4px;
+    color: white;
+}
+
+#gamePlay:hover {
+    background-color: var(--bl-white);
+    color: var(--bl-blk);
+}
+
+#randomNum {
+    align-self: center;
+    line-height: 2rem;
+    font-size: 1.5rem;
+}
+
+#guessMsg {
+    grid-column: 2/3;
+    align-self: start;
+    font-size: 2rem;
+}
+
+
+
+
+
+/* ----------------- Contact Form -----------------*/
+
+
+#contact {
+    padding: 1rem 3rem;
+    padding-left: 9rem;
+    margin-bottom: 0;
+
+}
+
+#contactdiv {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    margin: 0 auto;
+}
+
+form{
+    width: 70%;
+    padding: 0.5rem;
+    margin-top: 1rem;
+        z-index: 1;
+}
+
+input, label, textarea, legend {
+    width: 100%;
+    font-size: 1.1rem;
+}
+
+input:focus, textarea:focus {
+    border: var(--dark-seafoam) 4px solid;
+}
+
+.required::after {
+    content: "*";
+    color: var(--contrast);
+    font-size: 1.65rem;
+    font-weight: 800;
+}
+
+.error {
+    border: var(--contrast) 4px solid;
+    box-shadow: var(--dark-seafoam) 2px 2px 4px; 
+}
+
+input + p, textarea + p {
+    color: var(--contrast);
+}
+
+fieldset {
+    border: var(--dark-seafoam) 2px solid;
+    margin: .5rem 0rem;
+    padding: .25rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+legend {
+    font-size: 1.1rem;
+    padding: 0 .25rem;
+    width: auto;
+}
+
+input[type="radio"]{
+    width: 21px;
+    height: 21px;
+}
+
+.radioIn {
+    width: 80px;
+    display: flex;
+    padding: 0;
+}
+
+input[type=submit] {
+    width: 60%;
+    margin: 1rem auto;
+    padding: .5rem 2rem .5rem 2rem;
+    background-color: var(--mid-seafoam);
+    color: var(--bl-white);
+    font-family: 'Crimson Text', Georgia, 'Times New Roman', Times, serif;
+    font-size: 1.2rem;
+    border: var(--dark-seafoam) 2px solid;
+    border-radius: 4px;
+}
+
+input[type=submit]:hover {
+    background-color: var(--off-white);
+    color: var(--dark-seafoam);
+}
+
+#contact img {
+    width: 680px;
+    border-radius: 4px;
+    margin-right: 3rem;
+    padding-bottom: 2rem;
+}
+
+#displayInfo {
+    color: var(--bl-white);
+}
+
+
+/* footer */
+footer {
+    background-color: var(--dark-seafoam);
+    color: var(--bl-white);
+    font-size: .75rem;
+    text-align: center;
+}
+
+small {
+    display: block;
+}
+
+/* theme toggle */
+#themeToggle {
+    background-color: var(--bl-white);
+    border: none;
+    font-size: 1.5rem;
+    content: "";
+    border-radius: 16rem;
+    padding: .5rem 1rem;
+    position: absolute;
+    top: 20px;
+    left: 5px;
+}
+#themeToggle:hover {
+    background-color: var(--bl-blk);
+    color: var(--bl-white);
+
+}
