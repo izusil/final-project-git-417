@@ -425,7 +425,7 @@ cite {
 #guessMsg {
     grid-column: 2/3;
     align-self: start;
-    font-size: 2rem;
+    font-size: 1.75rem;
 }
 
 
@@ -463,6 +463,10 @@ input:focus, textarea:focus {
     border: var(--dark-seafoam) 4px solid;
 }
 
+/* fun fact, i was orginally planning on making this
+a much redder or oranger color
+ended up making it this yllw so that it still had high
+enough contrast against the background color */
 .required::after {
     content: "*";
     color: var(--contrast);

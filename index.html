@@ -159,7 +159,7 @@
             <div id="contactdiv">
                 <form id="form">
                     <label for="name" class="required">Full Name</label>
-                    <input type="text" name="name" id="name" required>
+                    <input type="text" name="name" id="name">
                     <p class="hidden">Please enter your full name</p>
                     <fieldset>
                         <legend>Select contact method:</legend>
@@ -170,10 +170,10 @@
                             <label for="conEmail">Email</label>
                         </section>
                     </fieldset>
-                    <label for="phone">Phone Number</label>
+                    <label for="phone" id="telNumLabel">Phone Number</label>
                     <input type="tel" name="phone" id="phone">
                     <p class="hidden">Please enter a valid 10-digit phone number</p>
-                    <label for="email">Email</label>
+                    <label for="email" id="emailLabel">Email</label>
                     <input type="email" name="email" id="email">
                     <p class="hidden">Please enter a valid email address</p>
                     <label for="comments" class="required">Comments</label>
